@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Geoportal interactivo de Conservación Productiva: explorá los predios ganaderos, los centros apícolas y la red de mujeres artesanas del Gran Paisaje Chaco-Pantanal." />
+  <title>Geoportal — Conservación Productiva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="styles.css?v=15" />
+</head>
+<body class="geoportal-page">
+  <a href="#map" class="skip-link">Saltar al mapa</a>
+
+  <header class="hd is-solid" id="hd">
+    <div class="hd__inner">
+      <a href="index.html" class="wordmark" aria-label="Conservación Productiva — inicio"><span class="wordmark__text"><strong>Conservación Productiva</strong><em>Gran Paisaje Chaco · Pantanal</em></span></a>
+      <nav class="hd__nav" id="hdNav" aria-label="Navegación principal">
+        <div class="hd__item"><a href="index.html">Inicio</a></div>
+        <div class="hd__item">
+          <a href="ganaderia.html">Líneas productivas</a>
+          <div class="hd__sub">
+            <a href="ganaderia.html">Ganadería bajo monte</a>
+            <a href="apicultura.html">Apicultura</a>
+            <a href="artesanias.html">Artesanías</a>
+            <a href="turismo.html">Turismo comunitario</a>
+          </div>
+        </div>
+        <div class="hd__item"><a href="geoportal.html">Geoportal</a></div>
+      </nav>
+      <a href="https://nativabolivia.org/" target="_blank" rel="noopener" class="hd__donar">NATIVA Bolivia ↗</a>
+      <button class="hd__burger" id="hdBurger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Botón para abrir el panel (solo móvil) -->
+  <button class="geo-panel-toggle" id="geoPanelToggle" aria-controls="geoPanel" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    Capas y datos
+  </button>
+  <!-- Fondo oscuro al abrir el panel (solo móvil) -->
+  <div class="geo-backdrop" id="geoBackdrop" aria-hidden="true"></div>
+
+  <div class="geo-shell">
+    <!-- Panel de control -->
+    <aside class="geo-panel" id="geoPanel">
+      <button class="geo-panel-close" id="geoPanelClose" aria-label="Cerrar panel" title="Cerrar">&times;</button>
+      <a href="index.html" class="crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg> Volver al sitio</a>
+      <p class="label label--forest">Geoportal</p>
+      <h1>El territorio del modelo</h1>
+      <p class="intro">Explorá dónde ocurre la Conservación Productiva. Activá y desactivá capas, cambiá el mapa base y hacé clic en cada elemento para ver su información.</p>
+
+      <div class="geo-section">
+        <div class="geo-stat geo-stat--feature">
+          <div class="n" id="st-ha">—</div>
+          <div class="l">Hectáreas de monte bajo manejo</div>
+        </div>
+        <div class="geo-stats">
+          <div class="geo-stat"><div class="n" id="st-predios">—</div><div class="l"><span class="geo-stat__dot" style="background:#3D6249"></span>Predios ganaderos</div></div>
+          <div class="geo-stat"><div class="n" id="st-apicultura">—</div><div class="l"><span class="geo-stat__dot" style="background:#C79A3C"></span>Centros apícolas</div></div>
+          <div class="geo-stat"><div class="n" id="st-artesanas">—</div><div class="l"><span class="geo-stat__dot" style="background:#B05E3B"></span>Grupos de artesanas</div></div>
+          <div class="geo-stat"><div class="n" id="st-turismo">—</div><div class="l"><span class="geo-stat__dot" style="background:#3E7CA8"></span>Turismo comunitario</div></div>
+        </div>
+      </div>
+
+      <div class="geo-section">
+        <div class="h">Capas</div>
+        <div class="layer" data-layer="ganaderia">
+          <span class="swatch" style="background:#3D6249"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 10h16M10 6v12"/></svg></span>
+          <span class="meta"><strong>Ganadería bajo monte</strong><small>Predios — superficie en hectáreas</small></span>
+          <span class="chk" aria-hidden="true"></span>
+        </div>
+        <div class="layer" data-layer="apicultura">
+          <span class="swatch" style="background:#C79A3C"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3"/></svg></span>
+          <span class="meta"><strong>Apicultura</strong><small>Centros de producción de miel</small></span>
+          <span class="chk" aria-hidden="true"></span>
+        </div>
+        <div class="layer" data-layer="artesanas">
+          <span class="swatch" style="background:#B05E3B"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16" stroke-dasharray="2 3"/></svg></span>
+          <span class="meta"><strong>Red de artesanas Alma de Monte</strong><small>Grupos por comunidad y pueblo</small></span>
+          <span class="chk" aria-hidden="true"></span>
+        </div>
+        <div class="layer" data-layer="turismo">
+          <span class="swatch" style="background:#3E7CA8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-6-5.686-6-10a6 6 0 1 1 12 0c0 4.314-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg></span>
+          <span class="meta"><strong>Turismo comunitario</strong><small>Comunidades con iniciativas</small></span>
+          <span class="chk" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="geo-section">
+        <div class="h">Leyenda</div>
+        <div class="legend-row"><span class="key-poly" style="background:#3D624973;border:1.2px solid #243D2E"></span> Predio ganadero</div>
+        <div class="legend-row"><span class="key-dot" style="background:#C79A3C;border:2px solid #fff;box-shadow:0 0 0 1px #ccc"></span> Centro apícola</div>
+        <div class="legend-row"><span class="key-dot" style="background:#B05E3B;border:2px solid #fff;box-shadow:0 0 0 1px #ccc"></span> Grupo de artesanas</div>
+        <div class="legend-row"><span class="key-dot" style="background:#3E7CA8;border:2px solid #fff;box-shadow:0 0 0 1px #ccc"></span> Turismo comunitario</div>
+      </div>
+
+      <div class="geo-section">
+        <div class="h">Mapa base</div>
+        <div class="base-opts">
+          <div class="base-opt" data-base="satelite"><div class="sw" style="background-image:url('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/146/82')"></div>Satélite</div>
+          <div class="base-opt active" data-base="claro"><div class="sw" style="background:#eef0ec"></div>Claro</div>
+          <div class="base-opt" data-base="relieve"><div class="sw" style="background:linear-gradient(135deg,#dfe6cf,#cdbfa3)"></div>Relieve</div>
+        </div>
+      </div>
+
+      <div class="geo-section">
+        <div class="h">Vista</div>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+          <button class="btn btn--ghost" id="geo-reset" style="padding:0.62rem 1.1rem;font-size:0.72rem">Restablecer vista</button>
+          <button class="btn btn--ghost" id="geo-fullscreen" style="padding:0.62rem 1.1rem;font-size:0.72rem">Pantalla completa</button>
+        </div>
+      </div>
+
+      <p style="font-size:0.76rem;color:var(--muted);margin-top:1.75rem;line-height:1.5">Datos en proyección original UTM 20S (EPSG:32720), reproyectados a WGS84 para visualización web. Fuente: NATIVA Bolivia.</p>
+    </aside>
+
+    <!-- Mapa -->
+    <div class="geo-map-wrap">
+      <div id="map" role="application" aria-label="Mapa interactivo del Gran Paisaje Chaco-Pantanal"></div>
+    </div>
+  </div>
+
+  <!-- Datos embebidos (funciona en file://) -->
+  <script src="assets/data/ganaderia.js"></script>
+  <script src="assets/data/apicultura.js"></script>
+  <script src="assets/data/artesanas.js"></script>
+  <script src="assets/data/turismo.js"></script>
+  <!-- Leaflet -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js?v=2"></script>
+  <script src="assets/js/geoportal.js?v=2"></script>
+  <!-- Botón flotante: ir a Alma de Monte -->
+  <a class="cp-fab" aria-label="Ir a Alma de Monte">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2C15 6.5 20 8.5 20 14a8 8 0 1 1-16 0C4 8.5 9 6.5 12 2z"/></svg>
+    <span class="cp-fab__t">Ir a Alma de Monte</span>
+  </a>
+
+</body>
+</html>

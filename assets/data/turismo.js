@@ -1,0 +1,3 @@
+/* Generado a partir de "turismo comunitario.geojson" reproyectado UTM 20S (EPSG:32720) -> WGS84 (EPSG:4326) */
+window.GEOPORTAL_DATA = window.GEOPORTAL_DATA || {};
+window.GEOPORTAL_DATA.GP_TURISMO = {"type":"FeatureCollection","name":"turismo comunitario","features":[{"type":"Feature","properties":{"Id":0,"Nombre":"Aguayrenda"},"geometry":{"type":"Point","coordinates":[-63.637593,-21.861551]}},{"type":"Feature","properties":{"Id":0,"Nombre":"Chimeo"},"geometry":{"type":"Point","coordinates":[-63.440076,-21.187658]}},{"type":"Feature","properties":{"Id":0,"Nombre":"Camatindi"},"geometry":{"type":"Point","coordinates":[-63.394602,-20.996157]}}]};

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Artesanías: tejidos de palma y karawata de los pueblos Weenhayek y Guaraní. La demostración más antigua de que el bosque se sostiene en pie y genera ingresos." />
+  <title>Artesanías — Conservación Productiva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=15" />
+</head>
+<body>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+  <header class="hd hd--over-dark" id="hd">
+    <div class="hd__inner">
+      <a href="index.html" class="wordmark" aria-label="Conservación Productiva — inicio"><span class="wordmark__text"><strong>Conservación Productiva</strong><em>Gran Paisaje Chaco · Pantanal</em></span></a>
+      <nav class="hd__nav" id="hdNav" aria-label="Navegación principal">
+        <div class="hd__item"><a href="index.html">Inicio</a></div>
+        <div class="hd__item">
+          <a href="ganaderia.html">Líneas productivas</a>
+          <div class="hd__sub">
+            <a href="ganaderia.html">Ganadería bajo monte</a>
+            <a href="apicultura.html">Apicultura</a>
+            <a href="artesanias.html">Artesanías</a>
+            <a href="turismo.html">Turismo comunitario</a>
+          </div>
+        </div>
+        <div class="hd__item"><a href="geoportal.html">Geoportal</a></div>
+      </nav>
+      <a href="https://nativabolivia.org/" target="_blank" rel="noopener" class="hd__donar">NATIVA Bolivia ↗</a>
+      <button class="hd__burger" id="hdBurger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="portada">
+      <img class="portada__img" src="IMAGENES/img4.jpeg" alt="Tejido de fibra natural." decoding="async" />
+      <div class="portada__veil" aria-hidden="true"></div>
+      <div class="wrap portada__copy">
+        <a href="index.html" class="crumb">← Conservación Productiva</a>
+        <p class="cp-mark reveal" style="color:rgba(244,242,236,0.8)">Apartado 03 · Línea productiva</p>
+        <h1 class="portada__title reveal" data-delay="80">Artesanías</h1>
+        <p class="portada__sub reveal" data-delay="160">Tejidos con palma y karawata de los pueblos Weenhayek y Guaraní: la demostración más antigua de que el bosque se sostiene en pie y genera ingresos.</p>
+      </div>
+    </section>
+
+    <!-- Nº 01 · EL OFICIO (editorial a dos columnas) -->
+    <section class="apartado" id="oficio" style="background:var(--bg);padding-bottom:clamp(2.5rem,5vw,3.5rem)">
+      <div class="wrap">
+        <div class="cp-intro2">
+          <div class="cp-intro2__head reveal">
+            <span class="cp-shead__no">01</span>
+            <p class="cp-shead__k">El oficio</p>
+            <h2 class="cp-shead__t">El bosque hecho artesanía.</h2>
+          </div>
+          <div class="cp-intro2__body reveal">
+            <p class="cp-lead">Durante generaciones, los pueblos indígenas del Gran Chaco han dado valor a los productos del bosque, transformando fibras naturales y madera en artesanías que preservan su identidad cultural y conocimiento ancestral. Cada pieza refleja una relación respetuosa con la naturaleza, donde el uso sostenible de los recursos contribuye a conservar la biodiversidad, fortalecer las economías locales y mantener el bosque como base del bienestar de las comunidades.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARRUSEL de fotografías -->
+    <section class="apartado" style="background:var(--bg);padding-top:0">
+      <div class="wrap">
+        <div class="cp-carrusel reveal">
+          <div class="cp-carrusel__track">
+            <figure class="cp-slide"><img src="IMAGENES/img6.jpeg" alt="Tejido de palma y karawata." decoding="async" /><figcaption>Tejido de palma y karawata</figcaption></figure>
+            <figure class="cp-slide"><img src="IMAGENES/img5.jpeg" alt="Las manos que trabajan la fibra." decoding="async" /><figcaption>Las manos que tejen</figcaption></figure>
+            <figure class="cp-slide"><img src="IMAGENES/img7.jpg" alt="Trabajo en comunidad junto al monte." decoding="async" /><figcaption>Trabajo en comunidad</figcaption></figure>
+            <figure class="cp-slide"><img src="IMAGENES/img9.jpg" alt="El monte chaqueño, origen de las fibras." decoding="async" /><figcaption>Fibras del monte chaqueño</figcaption></figure>
+          </div>
+          <div class="cp-carrusel__nav">
+            <button class="cp-carrusel__btn" aria-label="Foto anterior" onclick="this.closest('.cp-carrusel').querySelector('.cp-carrusel__track').scrollBy({left:-380,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button class="cp-carrusel__btn" aria-label="Foto siguiente" onclick="this.closest('.cp-carrusel').querySelector('.cp-carrusel__track').scrollBy({left:380,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+        </div>
+      
+      </div>
+    </section>
+
+    <!-- FRASE (tipografía delgada) -->
+    <section class="apartado" style="background:var(--bg-off)">
+      <div class="wrap">
+        <div class="cp-frase reveal">
+          <span class="cp-frase__rule" aria-hidden="true"></span>
+          <p>Cada pieza artesanal pone en valor la biodiversidad, el territorio y los conocimientos ancestrales que le dan origen. Al reconocer ese valor, el bosque deja de ser solo un espacio por conservar y se convierte en la base de una economía que genera <em>identidad, ingresos y oportunidades</em> para las comunidades.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nº 02 · LAS FIBRAS (materia prima + proceso) -->
+    <section class="apartado" style="background:var(--bg)">
+      <div class="wrap">
+        <header class="cp-shead reveal">
+          <span class="cp-shead__no">02</span>
+          <div><p class="cp-shead__k">La materia prima</p><h2 class="cp-shead__t">Las fibras del monte.</h2></div>
+        </header>
+        <p class="cp-lead cp-lead--muted reveal">Todo empieza en el monte. Las artesanías del Gran Chaco nacen de la palma, la karawata y las maderas del bosque —materiales que las comunidades conocen desde siempre y cosechan siguiendo los ciclos de cada planta, sin agotar el recurso. Recolectar en el momento justo, dejar que la planta se recupere y volver la próxima temporada es, en sí mismo, una forma de conservar.</p>
+        <div class="cp-steps reveal" style="margin-top:2.5rem">
+          <div class="cp-step"><span class="cp-step__n">01</span><div><h3>Cosechar sin agotar</h3><p>Se recoge la fibra respetando los tiempos de la planta, para que el monte siga produciendo temporada tras temporada.</p></div></div>
+          <div class="cp-step"><span class="cp-step__n">02</span><div><h3>Preparar a mano</h3><p>La palma y la karawata se limpian, secan y tiñen con recursos del propio bosque, sin químicos.</p></div></div>
+          <div class="cp-step"><span class="cp-step__n">03</span><div><h3>Tejer y tallar</h3><p>Manos que heredaron la técnica transforman la fibra y la madera en piezas únicas, cada una con su historia.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nº 03 · QUIÉNES TEJEN (pueblos + Red) -->
+    <section class="apartado" style="background:var(--bg-off)">
+      <div class="wrap">
+        <header class="cp-shead reveal">
+          <span class="cp-shead__no">03</span>
+          <div><p class="cp-shead__k">Las manos</p><h2 class="cp-shead__t">Quiénes tejen.</h2></div>
+        </header>
+        <p class="cp-lead cp-lead--muted reveal">Detrás de cada pieza hay una comunidad. Los pueblos <strong style="color:var(--ink)">Weenhayek</strong> y <strong style="color:var(--ink)">Guaraní</strong> del Chaco boliviano guardan un conocimiento textil de siglos, que hoy se sostiene sobre todo en las manos de las mujeres. La <strong style="color:var(--ink)">Red de artesanas Alma de Monte</strong> reúne a siete grupos que trabajan juntos, comparten técnicas y llevan sus piezas al mercado.</p>
+        <div class="cp-ficha reveal" style="margin-top:2.5rem">
+          <p class="cp-ficha__k">Red de artesanas Alma de Monte</p>
+          <p class="cp-ficha__t">Siete grupos, 144+ Artesanos.</p>
+          <p>Karandai, Tetagüasu, Yukimbia, Kutsaaj Wet Jwitsuk, Bajo Luna, La Ceiba y Cichar: grupos de mujeres artesanas de los pueblos Guaraní y Weenhayek, unidos en una red que fortalece su trabajo y su ingreso.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nº 04 · DEL MONTE AL MERCADO (editorial) -->
+    <section class="apartado" style="background:var(--bg)">
+      <div class="wrap">
+        <div class="cp-intro2">
+          <div class="cp-intro2__head reveal">
+            <span class="cp-shead__no">04</span>
+            <p class="cp-shead__k">El valor</p>
+            <h2 class="cp-shead__t">Del monte al mercado.</h2>
+          </div>
+          <div class="cp-intro2__body reveal">
+            <p class="cp-lead">Cuando estas piezas acceden a mercados que reconocen su origen —el trabajo artesanal, la fibra natural, el bosque conservado— conservar el monte deja de ser un sacrificio económico y se convierte en una condición de rentabilidad. El ingreso llega directo a las familias y, sobre todo, fortalece la autonomía económica de las mujeres, en comunidades donde muchas veces el bosque es el único capital disponible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATOS CLAVE (ledger) -->
+    <section class="apartado" style="background:var(--bg-off)">
+      <div class="wrap">
+        <p class="cp-mark reveal">Datos clave</p>
+        <div class="cp-ledger reveal" style="margin-top:1.5rem">
+          <div class="cp-ledger__row"><div><span class="cp-ledger__val">7</span><span class="cp-ledger__u">Grupos de mujeres</span></div><p class="cp-ledger__desc">Grupos de mujeres artesanas en la Red de artesanas Alma de Monte.</p></div>
+          <div class="cp-ledger__row"><div><span class="cp-ledger__val">2</span><span class="cp-ledger__u">Pueblos</span></div><p class="cp-ledger__desc">Guaraní y Weenhayek, con su conocimiento textil ancestral.</p></div>
+          <div class="cp-ledger__row"><div><span class="cp-ledger__val">144+</span><span class="cp-ledger__u">Artesanos</span></div><p class="cp-ledger__desc">Mujeres de los grupos Karandai, Tetagüasu, Yukimbia, Kutsaaj Wet Jwitsuk, Bajo Luna, La Ceiba y Cichar.</p></div>
+          <div class="cp-ledger__row"><div><span class="cp-ledger__val">100<em>%</em></span><span class="cp-ledger__u">Fibra natural</span></div><p class="cp-ledger__desc">Palma, karawata y madera de regeneración natural del monte.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FICHA / GEO -->
+    <section class="apartado" style="background:var(--bg)">
+      <div class="wrap">
+        <div class="cp-ficha reveal">
+          <p class="cp-ficha__k">En el mapa</p>
+          <p class="cp-ficha__t">La Red de artesanas Alma de Monte, en el territorio.</p>
+          <p>Cada grupo está georreferenciado dentro del Gran Paisaje. Ubicalos en el geoportal, junto a los predios ganaderos y los centros apícolas.</p>
+          <div style="margin-top:1.5rem"><a href="geoportal.html" class="btn btn--solid">Ver la red en el geoportal →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pagenav" aria-label="Otras páginas">
+      <a href="apicultura.html" class="is-prev"><span class="pagenav__k">← Anterior</span><span class="pagenav__t">Apicultura</span></a>
+      <a href="turismo.html" class="is-next"><span class="pagenav__k">Siguiente apartado →</span><span class="pagenav__t">Turismo comunitario</span></a>
+    </nav>
+
+  </main>
+
+  <footer class="ft">
+    <div class="wrap ft__inner">
+      <div class="ft__brand">
+        <div class="wordmark__text wordmark__text--ft"><strong>Conservación Productiva</strong><em>Gran Paisaje Chaco · Pantanal</em></div>
+        <p>La pieza vale porque viene del monte, y el monte vale porque produce la fibra.</p>
+      </div>
+      <nav class="ft__nav" aria-label="Pie de página"><a href="index.html#modelo">El Modelo</a><a href="ganaderia.html">Ganadería</a><a href="apicultura.html">Apicultura</a><a href="geoportal.html">Geoportal</a><a href="https://nativabolivia.org/" target="_blank" rel="noopener">NATIVA Bolivia ↗</a></nav>
+    </div>
+    <div class="wrap ft__base">
+      <span>© <span id="year"></span> Conservación Productiva — Gran Paisaje Chaco · Pantanal</span>
+      <span>El bosque en pie vale más que el bosque derribado.</span>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2"></script>
+  <!-- Botón flotante: ir a Alma de Monte -->
+  <a class="cp-fab" aria-label="Ir a Alma de Monte">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2C15 6.5 20 8.5 20 14a8 8 0 1 1-16 0C4 8.5 9 6.5 12 2z"/></svg>
+    <span class="cp-fab__t">Ir a Alma de Monte</span>
+  </a>
+
+</body>
+</html>
