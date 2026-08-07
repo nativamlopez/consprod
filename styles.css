@@ -784,3 +784,6 @@ body.menu-abierto { overflow: hidden; }
 /* Inicio · apartado "Líneas productivas": imágenes en color real por defecto (sin desaturar) */
 #lineas .cp-turi__img { filter: none; }
 #lineas .cp-turi:hover .cp-turi__img { filter: none; transform: scale(1.04); }
+
+/* Logo NATIVA sobre el hero del inicio */
+.cp-cover__logo { width: clamp(150px, 16vw, 205px); height: auto; margin-bottom: 1.75rem; }
