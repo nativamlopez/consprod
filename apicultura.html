@@ -46,7 +46,81 @@
       </div>
     </section>
 
-    <!-- Base limpia: iremos sumando las secciones de a poco. -->
+    <!-- Nº 01 · EL POLINIZADOR (editorial a dos columnas) -->
+    <section class="apartado" id="polinizador" style="background:var(--bg);padding-bottom:clamp(2.5rem,5vw,3.5rem)">
+      <div class="wrap">
+        <div class="cp-intro2">
+          <div class="cp-intro2__head reveal">
+            <span class="cp-shead__no">01</span>
+            <p class="cp-shead__k">El polinizador</p>
+            <h2 class="cp-shead__t">El insecto que sostiene la vida.</h2>
+          </div>
+          <div class="cp-intro2__body reveal">
+            <p class="cp-lead">Las abejas sustentan la biodiversidad y, a la vez, producen miel: nos ayudan nutricional y económicamente en nuestro medio de vida. Cuidar a los polinizadores es apoyar al insecto más importante del planeta —el que garantiza, con su trabajo silencioso, nuestra propia vida.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARRUSEL de fotografías -->
+    <section class="apartado" style="background:var(--bg);padding-top:0">
+      <div class="wrap">
+        <div class="cp-carrusel reveal">
+          <div class="cp-carrusel__track">
+            <figure class="cp-slide"><img src="IMAGENES/img18.jpg" alt="Apicultores revisando un cuadro de la colmena en el monte." decoding="async" /><figcaption>Manejo apícola en el monte</figcaption></figure>
+            <figure class="cp-slide"><img src="IMAGENES/img19.jpg" alt="Una abeja poliniza la flor amarilla del monte." decoding="async" /><figcaption>La abeja poliniza la flor del monte</figcaption></figure>
+            <figure class="cp-slide"><img src="IMAGENES/img20.jpg" alt="El monte chaqueño florecido, alimento de las abejas." decoding="async" /><figcaption>El monte florecido</figcaption></figure>
+          </div>
+          <div class="cp-carrusel__nav">
+            <button class="cp-carrusel__btn" aria-label="Foto anterior" onclick="this.closest('.cp-carrusel').querySelector('.cp-carrusel__track').scrollBy({left:-380,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button class="cp-carrusel__btn" aria-label="Foto siguiente" onclick="this.closest('.cp-carrusel').querySelector('.cp-carrusel__track').scrollBy({left:380,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRASE (tipografía delgada) -->
+    <section class="apartado" style="background:var(--bg-off)">
+      <div class="wrap">
+        <div class="cp-frase reveal">
+          <span class="cp-frase__rule" aria-hidden="true"></span>
+          <p>Cuando el monte es la base de la <em>vida, la cultura y la economía</em>, cuidar a las abejas deja de ser un gesto ambiental para volverse una forma de sostener el propio bienestar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nº 02 · SITIOS DEMOSTRATIVOS -->
+    <section class="apartado" style="background:var(--bg)">
+      <div class="wrap">
+        <header class="cp-shead reveal">
+          <span class="cp-shead__no">02</span>
+          <div><p class="cp-shead__k">En el territorio</p><h2 class="cp-shead__t">Dos sitios que muestran el modelo.</h2></div>
+        </header>
+        <p class="cp-lead cp-lead--muted reveal">Los sitios demostrativos apícolas del Modelo de Conservación Productiva están <strong style="color:var(--ink)">georreferenciados</strong>: se pueden ubicar y recorrer en el geoportal, junto a los predios ganaderos, la Red de artesanas y los puntos de turismo comunitario. Son espacios vivos donde una comunidad muestra, en la práctica, que producir miel y cuidar el bosque son parte de lo mismo.</p>
+        <div class="cp-ledger reveal" style="margin-top:2.5rem">
+          <div class="cp-ledger__row"><div><span class="cp-ledger__val">2</span><span class="cp-ledger__u">Sitios demostrativos</span></div><p class="cp-ledger__desc">Sitios apícolas del Modelo de Conservación Productiva, georreferenciados en el geoportal.</p></div>
+          <div class="cp-ledger__row"><div><span class="cp-ledger__val">1</span><span class="cp-ledger__u">Comunidad</span></div><p class="cp-ledger__desc">Una comunidad consciente del valor de la biodiversidad: la <strong style="color:var(--ink)">VIDA</strong>.</p></div>
+          <div class="cp-ledger__row"><div><span class="cp-ledger__val cp-ledger__val--word">Equilibrio</span><span class="cp-ledger__u">El resultado</span></div><p class="cp-ledger__desc">Cuidar y producir en el monte se traduce en equilibrio: eso garantiza la sostenibilidad del medio de vida.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FICHA / GEO -->
+    <section class="apartado" style="background:var(--bg-off)">
+      <div class="wrap">
+        <div class="cp-ficha reveal">
+          <p class="cp-ficha__k">En el mapa</p>
+          <p class="cp-ficha__t">Los sitios apícolas, georreferenciados.</p>
+          <p>Ubicá en el geoportal los <strong style="color:var(--ink)">sitios demostrativos apícolas</strong>, junto a los predios ganaderos, la Red de artesanas Alma de Monte y los puntos de turismo comunitario.</p>
+          <div style="margin-top:1.5rem"><a href="geoportal.html" class="btn btn--solid">Abrir el geoportal →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pagenav" aria-label="Otras páginas">
+      <a href="ganaderia.html" class="is-prev"><span class="pagenav__k">← Anterior</span><span class="pagenav__t">Ganadería</span></a>
+      <a href="artesanias.html" class="is-next"><span class="pagenav__k">Continuar →</span><span class="pagenav__t">Artesanías</span></a>
+    </nav>
 
   </main>
 
