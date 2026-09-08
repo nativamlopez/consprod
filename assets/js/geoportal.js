@@ -35,8 +35,8 @@
       'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
       { attribution: 'Tiles &copy; Esri — Source: Esri, Maxar, Earthstar Geographics', maxZoom: 18 }),
     claro: L.tileLayer(
-      'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-      { attribution: '&copy; OpenStreetMap &copy; CARTO', subdomains: 'abcd', maxZoom: 19 }),
+      'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+      { attribution: 'Tiles &copy; Esri — Esri, DeLorme, NAVTEQ', maxZoom: 16 }),
     relieve: L.tileLayer(
       'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
       { attribution: 'Map data: &copy; OpenStreetMap, SRTM | &copy; OpenTopoMap', maxZoom: 17 })
