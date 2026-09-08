@@ -12,7 +12,7 @@
 
   /* ---- Paleta de marca por capa ---- */
   var C = {
-    ganaderia: { stroke: '#243D2E', fill: '#3D6249', label: 'Ganadería bajo monte' },
+    ganaderia: { stroke: '#243D2E', fill: '#3D6249', label: 'Ganadería bajo bosque' },
     apicultura: { color: '#C79A3C', label: 'Apicultura' },
     artesanas: { color: '#B05E3B', label: 'Red de artesanas Alma de Monte' },
     turismo: { color: '#3E7CA8', label: 'Turismo comunitario' }
